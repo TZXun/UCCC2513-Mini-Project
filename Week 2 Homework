@@ -1,1 +1,32 @@
+# exercise 3
+my_arr = np.arange(10)
+print(my_arr)
 
+arr_slice = my_arr[4:7].copy()
+print(arr_slice)
+
+arr_slice[0] = -1
+print("arr_slice : ", arr_slice)
+print("my_arr : ", my_arr)
+
+
+#exercise 4
+import matplotlib.pyplot as plt
+import numpy as np
+
+#create a background
+black = np.zeros((1, 1), dtype = np.uint8)
+
+#create a circle
+figure, axes = plt.subplots()
+#                      x-axis    y-axis    radius
+circle = plt.Circle ((  0.0,      0.0),     0.1 ,  color = "White", fill = True, )
+
+#create a background
+plt.imshow(black, cmap = plt.cm.gray)
+
+#create a circle
+axes.set_aspect(1)
+axes.add_artist(circle)
+
+plt.show()
